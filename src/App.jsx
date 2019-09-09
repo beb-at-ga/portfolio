@@ -6,6 +6,7 @@ import { Route } from 'react-router-dom';
 // Styles
 import { CssBaseline } from '@material-ui/core';
 import './App.css';
+import { makeStyles } from '@material-ui/core/styles';
 
 // Content Components
 import Header from './components/Navigation/Header';
@@ -16,33 +17,25 @@ import Blog from './components/Blog/Blog';
 import Footer from './components/Navigation/Footer';
 
 // Other Content
-import { articles } from './articles.js';
+import { articles, projects } from './articles.js';
+
 
 function App() {
+  const useStyles = makeStyles(theme => ({
+    root: {
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100vh'
+    },
+  }));
 
-  let projects = [
-    {
-      service: 'Whitening',
-      desc: 'Whitening fast! 30 min or less. Guranteed.'
-    },
-    {
-      service: 'This',
-      desc: '.this?'
-    },
-    {
-      service: 'That',
-      desc: 'what?'
-    },
-    {
-      service: 'The other',
-      desc: 'all the rest'
-    }
-  ]
+  const classes = useStyles();
 
   return (
     <React.Fragment>
       <CssBaseline />
-      <div className="App">
+      <div className={classes.root}>
+      {/* <div className="App"> */}
         <Router>
           <Header />
 
@@ -54,7 +47,7 @@ function App() {
             } />
 
             <Route path='/blog' render={
-              () => <Blog articles={articles}/>} />
+              () => <Blog articles={articles} />} />
 
             <Route path='/about' render={
               () => <About name="Dr. Toothy" phone="425-555-1212" />
