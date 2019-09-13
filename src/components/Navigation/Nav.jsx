@@ -14,6 +14,8 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import PropTypes from 'prop-types';
 import DraftsIcon from '@material-ui/icons/Drafts';
 
+const drawerWidth = 240;
+
 const useStyles = makeStyles({
   list: {
     width: 250,
@@ -23,8 +25,7 @@ const useStyles = makeStyles({
   },
 });
 
-
-function ListItemLink(props) {
+const ListItemLink = (props) => {
   const { icon, primary, to } = props;
 
   const renderLink = React.useMemo(
