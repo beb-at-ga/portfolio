@@ -5,7 +5,7 @@ import { Container } from '@material-ui/core';
 const Projects = () => {
   return (
     <Container>
-    <h1>Projects Placeholder</h1>
+      <img src='https://picsum.photos/800/600' alt='test' />
     </Container>
   )
 }
