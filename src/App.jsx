@@ -19,7 +19,6 @@ import Footer from './components/Navigation/Footer';
 // Other Content
 import { articles, projects } from './articles.js';
 
-
 function App() {
   const useStyles = makeStyles(theme => ({
     root: {
