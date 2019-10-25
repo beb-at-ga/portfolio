@@ -18,6 +18,11 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
   },
+  border: {
+    height: '25px',
+    width: '100%',
+    'background-color': 'black',
+  }
 }));
 
 
@@ -31,11 +36,12 @@ const Header = (props) => {
         <Toolbar >
           <TopNav />
             <Typography variant="h6" className={classes.title}>
-              Bryan Brinson
+              bryanbrinson.info
           </Typography>
           {/* <Button color="inherit">Login</Button> */}
         </Toolbar>
       </AppBar>
+      <div className={classes.border}></div>
     </div>)
 }
 

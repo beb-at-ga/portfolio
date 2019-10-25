@@ -1,15 +1,14 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 
-
 import IconButton from '@material-ui/core/IconButton';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 
-
 const useStyles = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
+    color: 'white',
   },
   input: {
     display: 'none',
@@ -23,8 +22,10 @@ const LinkFarm = (props) => {
   return (
     <div>
       <IconButton className={classes.button} aria-label="LinkedIn">
-        <LinkedInIcon />
+        <LinkedInIcon>
+        </LinkedInIcon>
       </IconButton>
+
       <IconButton className={classes.button} aria-label="EMail">
         <EmailIcon />
       </IconButton>
